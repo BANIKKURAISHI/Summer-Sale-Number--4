@@ -6,7 +6,7 @@
     <title>B8A5-Summer-sale</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <header>
@@ -14,7 +14,7 @@
             <div class="text-center mt-2  md:mt-30 lg:mt-52 ">
                   <h4 class="m-5 text-2xl ">---SALE FEVER---</h4>
                   <h2  class="text-6xl text-black font-bold m-5">Purchase TK 200 or <br>above & get <span class="text-pink-600 m-2" >20% off</span></h2>
-                 <span class="text-2xl">Use Promo Code</span> <button class="btn rounded-xl bg-pink-600 text-white ">SELL200</button>
+                 <span class="text-2xl">Use Promo Code</span> <button class="btn rounded-xl bg-pink-600 text-white " >SELL200</button>
                   
             </div>
             <div class="text-center">
@@ -24,10 +24,12 @@
     </header>
     <main>
       
-        <div class=" flex flex-col  md:flex-row lg:flex-row ">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-3" >
+        <div class=" flex flex-col   md:flex-row lg:flex-row ">
+          <div >
             
+            <h1 class="text-4xl mx-10 my-2 font-bold">Kitchenware</h1>
           
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               <!--11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111-->
              <div class="card w-96 bg-base-100 mx-10 my-20 shadow-xl" id="card1" onclick="cardButton(this)">
                 <figure class="px-10 pt-10 ">
@@ -87,13 +89,13 @@
                     49.00 TK
                   </span>
               </div>
-            
+            </div>
         
 
 
-            
+              <h1 class="text-4xl mx-10 my-2 font-bold ">Sportswear</h1>
                
-            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                <!--------card44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444-->
             <div class="card w-96 bg-base-100 mx-10 my-20 shadow-xl" id="card1" onclick="cardButton(this)">
                <figure class="px-10 pt-10 ">
@@ -113,7 +115,7 @@
                    49.00 TK
                  </span>
              </div>
-
+            
              <!----------card5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555-->
             <div class="card w-96 bg-base-100 mx-10 my-20 shadow-xl" id="card1" onclick="cardButton(this)">
                <figure class="px-10 pt-10 ">
@@ -135,7 +137,7 @@
              </div>
     
            <!--------------card666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666-->
-            <div class="card w-96 bg-base-100 mx-10 my-20 shadow-xl" id="card1" onclick="cardButton(this)">
+            <div class=" card w-96 bg-base-100   lg:mx-10 my-20 shadow-xl" id="card1" onclick="cardButton(this)">
                <figure class="px-10 pt-10 ">
                  <img src="images/prod6.png" alt="logo" class="rounded-xl w-4/5 bg-base-200" />
                </figure>
@@ -153,12 +155,13 @@
                    159.00 TK
                  </span>
              </div>
-           
+            </div>
         
         
-           
+            
        
-        
+             <h1 class="text-4xl mx-10 my-2 font-bold">Furniture</h1>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
             <!--77777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777-->
             
@@ -217,26 +220,26 @@
                  </div>
              <h2 class="card-title" id="first-card">Flexible Sofa</h2>
               </div>
-              <span class="text-center"id="price">
+              <span class="text-center"id="price">-
                339.00 TK
              </span>
          </div>
         </div> 
-      
+      </div>
            
     
 
 
-                  <div class="card w-96 h-32 bg-base-100 shadow-xl mt-32 p-7 rounded-lg ">
+                  <div class="card w-96 h-32 bg-base-100 shadow-xl mt-32 p-7  rounded-lg ">
                     <div class="text-justify  ">
                         <h1>Have coupon?</h1>
                         <div class="border border-slate-300 ">
-                            <input type="text" placeholder="Coupon code" class="text-xl  w-3/4  ">
-                            <button disabled="disabled" id="second-btn" class="inline bg-pink-600 rounded-sm text-white text-3xl second-btn ">Apply</button>
+                            <input type="text" placeholder="Coupon code" class="text-xl  w-3/4 " id="inputDelete">
+                            <button id="second-btn" class="inline bg-pink-600 rounded-sm text-white text-3xl second-btn disabled:bg-gray-500 " disabled>Apply</button>
                         </div>
                       </div>
 
-                       <div class="card w-96  bg-base-100 shadow-xl mt-32 p-10 rounded-lg ">
+                       <div class="card w-96  bg-base-100 shadow-xl mt-32 p-10 mr-12 rounded-lg ">
                         <div class="text-left ">
                            <ul class="list">
                             <li id="list" class="">
@@ -249,28 +252,30 @@
                        
                         <hr>
                        <div class="p-20 ">
-                        <h1>Total price: <span id="Total-price">00</span></h1>
-                        <h1>Discount: <span id="Discount">00</span></h1>
-                        <h1>Total: <span id="total">00</span> </h1>
+                        <h1>Total price: <span id="Total-price">0.00</span></h1>
+                        <h1>Discount: <span id="Discount">0.00</span></h1>
+                        <h1>Total: <span id="total">0.00</span> </h1>
                         <hr>
                        </div>
                     </div>
-                    <button disabled="disabled" id="new" class="bg-pink-600 rounded-xl text-white text-2xl p-3 mx-4 -my-16 new">Make Purchase</button>
-                 </div>
-
                     
-
-                      </div>
+                      <button  id="Purchase-button" class=" bg-pink-600 rounded-xl text-white text-2xl p-3 mx-4 -my-16 new disabled:bg-gray-500" disabled  onclick="cardButton(this)">Make Purchase
+                      
                    
+
+                      
+                      
       
-           
-        </div>
+                               
+                            </div>
+                        </div>
+                       </div>
     </main>
 
 
-    <span class="text-4xl mx-10 my-2 font-bold  grid grid-col-span-3">Furniture</span>
-    <span class="text-4xl mx-10 my-2 font-bold grid- grid-col-span-3">Sportsware</span>
+    
 
     <script src="first.js"></script>
+    <script src="calculate.js"></script>
 </body>
 </html>
