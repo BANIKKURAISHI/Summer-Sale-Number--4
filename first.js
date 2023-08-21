@@ -13,84 +13,56 @@ const price5 =Target.childNodes[5].innerText.split(' ')[0];
 
 
 total=parseFloat(total) + parseFloat(price5)
+  ///total amount displayed
+const newTotal =document.getElementById('total')
+const newTotalString =newTotal.innerText
+const newTotalNumber =parseFloat(newTotalString)
+newTotal.innerText=total
+
 
 
 const totalAmount=document.getElementById('Total-price')
 const totalAmountString =totalAmount.innerText
 const totalAmountNumber =parseFloat(totalAmountString)
 totalAmount.innerText =total
-
-
+ 
+const coupon =document.getElementById('inputDelete')
 const button1=document.getElementById('Purchase-button')
-
-
+const button=document.getElementById('second-btn')
 if(total > 0){
 
   button1.removeAttribute('disabled')
+  if(total > 200){
+    button.removeAttribute('disabled')
+    
+  }
+  else{
+    button.setAttribute('disabled')
+    
+  }
+  
 }
 else{
   button1.setAttribute('disabled')
+  
+}
 }
 
 
+
+
+
+
+
+
+function windows(){
+  const newWindow =document.getElementById('last-btn')
+  newWindow=window.location.href="index.html"
+
 }
 
 
 
-document.getElementById('inputDelete').addEventListener('keyup',function(event){
-  const text =event.target.value
-  const button=document.getElementById('second-btn')
-  const newText=document.getElementById('Total-price')
-  const newTextString=newText.innerText
-  const newTextNumber=parseFloat(newTextString) 
-
-  if(text==='SELL200'&& newTextNumber>200){
-    button.removeAttribute('disabled')
-  }
-  else{
-    button.setAttribute('disabled',true)
-  }
-})
-
-
-
-
-/*function unable(target){
-  const button=document.getElementById('Purchase-button')
-  const newText=document.getElementById('Total-price')
-  const newTextString=newText.innerText
-  const newTextNumber=parseFloat(newTextString) 
- 
-     if(newTextNumber < 0){
-     button.disabled = true
-     }
-     else{
-      button.disabled = false
-     }
-
-}*/
-
-
-
-
-document.getElementById('Purchase-button').addEventListener('click',function(){
-
-console.log('done')
-})
-
-/*let input=document.getElementById('Total-price')
-let button =document.getElementById('Purchase-button')
-input.addEventListener("change",able)
-
-function able(){
-
-if (document.getElementById('Total-price').innerText===''){
-  button.disabled=true
-}
-else {
-    button.disabled=false
-}
-}*/
 
 
 
@@ -98,11 +70,13 @@ else {
 
 
 
-/*function addition(inputId){
-  const firstField=document.getElementById(inputId)
-  const firstFieldString=firstField.innerText
-  const firstFieldNumber=parseFloat(firstFieldString)
-  return firstField
-}*/
+
+
+
+
+
+
+
+
 
 
